@@ -8,4 +8,8 @@ template <typename T>
 template <class T>
 ```
 
-- template specialization
+#### template variable
+    Available from C++ 14
+```c++
+template <typename T>
+T pi = T(3.1415926535897932385L);
