@@ -174,8 +174,21 @@ multimap allows duplicates and keys do not remain unique, indexing and at operat
 
 An iterator is an STL object that can iterate through the elements of the container. It acts lot like a pointer. The iterator class is defined in the scope of the container class(vector<int>::iterator).
 
-* Types of iterators:
-    - Input iterator
-        * Capable of reading, but not writing
-        * Incrementing but not decrementing
-        * What the value is read, cannot be read again
+```c++
+#include <iostream>
+```
+
+#### Types of iterators:
+- Input iterator
+    - Capable of reading, but not writing
+    - Incrementing but not decrementing
+    - Once the value is read, cannot be read again
+
+- Output iterator
+    - Write a value once and increment
+
+- Forward iterator
+    - Combination of input and output iterator
+    - Designed to be efficient for iterating from beginning to end, not vice versa
+
+A range based for loop, uses a forward iterator
