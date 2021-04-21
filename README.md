@@ -220,3 +220,20 @@ An iterator is an STL object that can iterate through the elements of the contai
     - Access any element in any position
     - Have all functionality of C pointer
     - Vector iterator will work here
+
+
+## Transform function
+
+Bulk transforms on elements of a container. These are found in <algorithm> header.
+
+* Unary operator
+```c++
+transform(v1.begin(), v1.end(), v2.begin(), x)
+```
+
+Argument 1 and 2 are begin and end of container, 3rd is for output, 4th is object operator, its a unary function, its pointer to either function or object functor, that takes 1 argument.
+
+* Binary operator
+```c++
+transform(v1.begin(), v1.end(), v2.begin(), v3.begin(), x)
+```
