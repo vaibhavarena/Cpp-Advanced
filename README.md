@@ -31,7 +31,7 @@ Defining class templates and template implementation in different files, the lin
 They provide the commonly used data structures.
 
 #### vector
--------------
+---
 
 * ##### info
     v1.size()
@@ -86,7 +86,7 @@ They provide the commonly used data structures.
     ```
 
 #### list
-===========
+===
 
 Optimized for rapid insert and delete operation, and does not support random access.
 
