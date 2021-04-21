@@ -32,9 +32,11 @@ They provide the commonly used data structures.
 
 #### vector
 * ##### info
+```c++
     v1.size()
     v1.front()
     v1.back()
+```
 
 * ##### index
     v1[5]
