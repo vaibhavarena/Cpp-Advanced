@@ -30,10 +30,7 @@ Defining class templates and template implementation in different files, the lin
 
 They provide the commonly used data structures.
 
-#### vector
-```c++
-#include <vector>
-```
+#### __vector__
 
 * ##### info
     v1.size()
@@ -87,8 +84,51 @@ They provide the commonly used data structures.
         vector<string> v5(std::move(v4));
     ```
 
-#### list
+#### __list__
 
 Optimized for rapid insert and delete operation, and does not support random access.
 
 Most functions remain same as vector(Refer 4.list_stl.cpp).
+
+#### __pair__
+
+Used when you want to carry multiple strongly typed values.
+```c++
+pair<int, string> p(23, "twenty three");
+
+pair<int, string> p3;
+p3 = make_pair(7, "seven");
+
+cout << p3.first() << " " << p3.second() << endl;
+```
+
+#### __tuple__
+
+Starting from C++ 11, we can use tuple as pair but can contain more than 2 values.
+
+```c++
+// Getting values
+get<0>(t);
+```
+
+#### __array__
+
+Available from C++ 11, fixed size sequence container.
+```c++
+array<string, 5> a1;
+
+// data function - returns the pointer to underlying C-array
+int *a = a1.data();
+```
+
+#### __deque__
+
+Deque is optimized for push and pop, so it is default container for stacks and queues. It has random access and iterator capabilities.
+
+#### __queue__
+
+It is an wrapper adapter which takes another container to implement queue functionality(Optimized to be used with deque). It is not a random access container.
+
+#### __stack__
+
+Wrapper adapter like queue
