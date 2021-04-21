@@ -33,19 +33,15 @@ They provide the commonly used data structures.
 #### vector
 * ##### info
     v1.size()
-
     v1.front()
-
     v1.back()
 
 * ##### index
     v1[5]
-
     v1.at(5)
 
 * ##### insert
     v1.insert(v1.begin() + 5, 42)
-
     v1.insert(v1.begin(), {1, 2, 3, 4, 5})      Insert with initializer list
 
 * ##### erase
@@ -179,7 +175,7 @@ multimap allows duplicates and keys do not remain unique, indexing and at operat
 An iterator is an STL object that can iterate through the elements of the container. It acts lot like a pointer. The iterator class is defined in the scope of the container class(vector<int>::iterator).
 
 * Types of iterators:
-    * Input iterator
-        - Capable of reading, but not writing
-        - Incrementing but not decrementing
-        - What the value is read, cannot be read again
+    - Input iterator
+        * Capable of reading, but not writing
+        * Incrementing but not decrementing
+        * What the value is read, cannot be read again
