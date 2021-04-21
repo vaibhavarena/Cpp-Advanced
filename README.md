@@ -32,7 +32,6 @@ They provide the commonly used data structures.
 
 ___
 #### vector
-___
 * ##### info
     v1.size()
     v1.front()
@@ -88,7 +87,6 @@ ___
 
 ___
 #### list
-___
 
 Optimized for rapid insert and delete operation, and does not support random access.
 
@@ -97,7 +95,6 @@ Most functions remain same as vector(Refer 4.list_stl.cpp).
 
 ___
 #### pair
-___
 
 Used when you want to carry multiple strongly typed values.
 ```c++
@@ -111,7 +108,6 @@ cout << p3.first() << " " << p3.second() << endl;
 
 ___
 #### tuple
-___
 
 Starting from C++ 11, we can use tuple as pair but can contain more than 2 values.
 
@@ -122,7 +118,6 @@ get<0>(t);
 
 ___
 #### array
-___
 
 Available from C++ 11, fixed size sequence container.
 ```c++
@@ -134,28 +129,24 @@ int *a = a1.data();
 
 ___
 #### deque
-___
 
 Deque is optimized for push and pop, so it is default container for stacks and queues. It has random access and iterator capabilities.
 
 
 ___
 #### queue
-___
 
 It is an wrapper adapter which takes another container to implement queue functionality(Optimized to be used with deque). It is not a random access container.
 
 
 ___
 #### stack
-___
 
 Wrapper adapter like queue. Default underlying container is deque.
 
 
-***
+---
 #### sets
-___
 set - does not duplicate copies
 multiset - allows duplicates
 
