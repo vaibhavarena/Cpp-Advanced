@@ -216,7 +216,7 @@ An iterator is an STL object that can iterate through the elements of the contai
     - Set type uses bi directional iterator
 
 - Random access iterator
-    - Most complete of all operators
+    - Most complete of all iterators
     - Access any element in any position
     - Have all functionality of C pointer
     - Vector iterator will work here
