@@ -153,7 +153,7 @@ ___
 Wrapper adapter like queue. Default underlying container is deque.
 
 
----
+***
 #### sets
 ___
 set - does not duplicate copies
