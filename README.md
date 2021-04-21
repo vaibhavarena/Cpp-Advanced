@@ -30,7 +30,8 @@ Defining class templates and template implementation in different files, the lin
 
 They provide the commonly used data structures.
 
-#### __vector__
+#### vector
+-------------
 
 * ##### info
     v1.size()
@@ -84,7 +85,8 @@ They provide the commonly used data structures.
         vector<string> v5(std::move(v4));
     ```
 
-#### __list__
+#### list
+===========
 
 Optimized for rapid insert and delete operation, and does not support random access.
 
@@ -131,4 +133,21 @@ It is an wrapper adapter which takes another container to implement queue functi
 
 #### __stack__
 
-Wrapper adapter like queue
+Wrapper adapter like queue. Default underlying container is deque.
+
+#### __sets__
+set - does not duplicate copies
+multiset - allows duplicates
+
+Will arrange elements as in Red black trees(set and multiset). Will print elements in sorted order.
+
+The insert method returns a pair(set and unordered_set), the first element is the iterator to new element, or the duplicate element which prevented its insert, the second element is true or false.
+
+```c++
+set<string> s1 = {"one", "two", "three", "four", "five"};
+
+auto r = s1.insert("five");
+
+if(!r.second)
+    cout << "Insert failed";
+```
