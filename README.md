@@ -192,3 +192,12 @@ An iterator is an STL object that can iterate through the elements of the contai
     - Designed to be efficient for iterating from beginning to end, not vice versa
 
 A range based for loop, uses a forward iterator
+
+- Bi directional iterator
+    - Set type uses bi directional iterator
+
+- Random access iterator
+    - Most complete of all operators
+    - Access any element in any position
+    - Have all functionality of C pointer
+    - Vector iterator will work here
