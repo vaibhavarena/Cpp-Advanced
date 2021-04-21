@@ -33,33 +33,47 @@ They provide the commonly used data structures.
 #### vector
 * ##### info
 ```c++
-    v1.size()
-    v1.front()
-    v1.back()
+v1.size()
+v1.front()
+v1.back()
 ```
 
 * ##### index
-    v1[5]
-    v1.at(5)
+```c++
+v1[5]
+v1.at(5)
+```
 
 * ##### insert
-    v1.insert(v1.begin() + 5, 42)
-    v1.insert(v1.begin(), {1, 2, 3, 4, 5})      Insert with initializer list
+```c++
+v1.insert(v1.begin() + 5, 42)
+v1.insert(v1.begin(), {1, 2, 3, 4, 5})      Insert with initializer list
+```
 
 * ##### erase
-    v1.erase(v1.begin() + 5)
+```c++
+v1.erase(v1.begin() + 5)
+```
 
 * ##### push_back
-    v1.push_back(3)    
+```c++
+v1.push_back(3)    
+```
 
 * ##### pop_back
-    v1.pop_back()
+```c++
+v1.pop_back()
+```
 
 * ##### empty
-    v1.empty()
+```c++
+v1.empty()
+```
 
 * ##### clear
-    v1.clear()
+```c++
+v1.clear()
+```
 
 
 * ##### constructors
