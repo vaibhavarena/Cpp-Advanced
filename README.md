@@ -30,18 +30,21 @@ Defining class templates and template implementation in different files, the lin
 
 They provide the commonly used data structures.
 
-##### vector
+#### vector
+```c++
+#include <vector>
+```
 
-* info
+* ##### info
     v1.size()
     v1.front()
     v1.back()
 
-* index
+* ##### index
     v1[5]
     v1.at(5)
 
-* insert
+* ##### insert
     v1.insert(v1.begin() + 5, 42)
     v1.insert(v1.begin(), {1, 2, 3, 4, 5})      Insert with initializer list
 
@@ -84,3 +87,8 @@ They provide the commonly used data structures.
         vector<string> v5(std::move(v4));
     ```
 
+#### list
+
+Optimized for rapid insert and delete operation, and does not support random access.
+
+Most functions remain same as vector(Refer 4.list_stl.cpp).
