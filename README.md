@@ -30,19 +30,22 @@ Defining class templates and template implementation in different files, the lin
 
 They provide the commonly used data structures.
 
-___
 #### vector
 * ##### info
     v1.size()
+
     v1.front()
+
     v1.back()
 
 * ##### index
     v1[5]
+
     v1.at(5)
 
 * ##### insert
     v1.insert(v1.begin() + 5, 42)
+
     v1.insert(v1.begin(), {1, 2, 3, 4, 5})      Insert with initializer list
 
 * ##### erase
@@ -162,3 +165,21 @@ auto r = s1.insert("five");
 if(!r.second)
     cout << "Insert failed";
 ```
+
+
+___
+#### Map
+Provide sorted key-value pair. Each element in a map is a pair.
+
+multimap allows duplicates and keys do not remain unique, indexing and at operator with multimap
+
+
+## Iterator
+
+An iterator is an STL object that can iterate through the elements of the container. It acts lot like a pointer. The iterator class is defined in the scope of the container class(vector<int>::iterator).
+
+* Types of iterators:
+    * Input iterator
+        - Capable of reading, but not writing
+        - Incrementing but not decrementing
+        - What the value is read, cannot be read again
