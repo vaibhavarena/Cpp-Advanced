@@ -30,8 +30,9 @@ Defining class templates and template implementation in different files, the lin
 
 They provide the commonly used data structures.
 
-### vector
-
+---
+#### vector
+___
 * ##### info
     v1.size()
     v1.front()
