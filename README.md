@@ -237,3 +237,44 @@ Argument 1 and 2 are begin and end of container, 3rd is for output, 4th is objec
 ```c++
 transform(v1.begin(), v1.end(), v2.begin(), v3.begin(), x)
 ```
+
+
+
+## STL Functions
+
+Functor is a class with an operator overload for the function called operator.
+
+Definition : "A function pointer allows a pointer to a function to be passed as a parameter to another function. Functors (Function Objects) in C++ allows the function call operator() to be overloaded. It allows instantiated object of a class to be called like a function."
+
+```c++
+#include<functionl>
+```
+
+* Arithmetic functors
+```c++
+plus<long> f;
+minus<long> m;
+multiplies<long> mul;
+divides<long> div;
+modulus<long> mod;
+negate<long> neg;   // Unary functor
+```
+
+* Relational functors
+```c++
+greater<long> f;
+less<long> l;
+greater_equal<long> ge;
+less_equal<long> le;
+equal_to<long> e;
+not_equal_to<long> ne;
+```
+
+* Logical functors
+Give output like logical gates, you can use bool vectors of values filled with 0 or 1.
+
+```c++
+logical_or<bool> lo;    
+logical_and<bool> la;
+logical_not<bool> ln;   // Unary
+```
