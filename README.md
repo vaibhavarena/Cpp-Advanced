@@ -361,3 +361,23 @@ bool mycomp(const T & a, const T & b){
 sort(v1.begin(), v1.end(), mycomp);
 stable_sort(v1.begin(), v1.end(), mycomp);
 ```
+
+
+* Merge
+
+```c++
+// Can also use predicate function
+// Have to use custom function in both sort and merge to make it work
+merge(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
+``` 
+
+* Binary search
+
+Performs binary search on sorted container
+
+```c++
+binary_search(v1.begin(), v1.end(), n);     // Returns boolean
+lower_bound(v1.begin(), v1.end(), n);       // Return iterator
+upper_bound(v1.begin(), v1.end(), n);
+equal_range(v1.begin(), v1.end(), n);  // Returns pair of LB and UB
+```
