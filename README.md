@@ -244,7 +244,7 @@ transform(v1.begin(), v1.end(), v2.begin(), v3.begin(), x)
 
 Functor is a class with an operator overload for the function called operator.
 
-Definition : "A function pointer allows a pointer to a function to be passed as a parameter to another function. Functors (Function Objects) in C++ allows the function call operator() to be overloaded. It allows instantiated object of a class to be called like a function."
+Definition : **"A function pointer allows a pointer to a function to be passed as a parameter to another function. Functors (Function Objects) in C++ allows the function call operator() to be overloaded. It allows instantiated object of a class to be called like a function."** 
 
 ```c++
 #include<functionl>
