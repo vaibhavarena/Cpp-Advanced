@@ -278,3 +278,86 @@ logical_or<bool> lo;
 logical_and<bool> la;
 logical_not<bool> ln;   // Unary
 ```
+
+
+## STL Algorithms
+
+```c++
+#include<algorithm>
+
+sort(v1.begin(), v1.end());
+binary_search(v1.begin(), v1.end(), n); // Returns bool
+```
+
+* Conditional algorithm
+
+```c++
+all_of(v1.begin(), v1.end(), is_prime<int>);    // is_prime is custom function
+any_of(v1.begin(), v1.end(), is_prime<int>);    // (not in c++)
+none_of(v1.begin(), v1.end(), is_prime<int>);
+```
+
+* Searching and counting
+
+```c++
+find(v1.begin(), v1.end(), 41);     // Returns an iterator if found, else returns end()
+find_if(v1.begin(), v1.end(), is_odd<int>);         // Find first odd number
+find_if_not(v1.begin(), v1.end(), is_odd<int>);     //Finds first even number
+search(v1.begin(), v1.end(), v2.begin(), v2.end());  // Search for a sequence v2
+count(v1.begin(), v1.end(), 7);    // Count occurences
+count_if(v1.begin(), v1.end(), is_odd<int>);
+```
+
+* Replacing and Removing
+
+```c++
+replace(v1.begin(), v1.end(), 47, 99);
+replace_if(v1.begin(), v1.end(), is_even<int>, 99);
+remove(v1.begin(), v2.end(), 42);   // Returns iterator to last element in container that is not removed
+unique(v1.begin(), v1.end());   // Removes consecutive duplicates
+```
+
+* Modifying algorithms
+
+```c++
+copy(v1.begin(), v1.end(), v2.begin());
+copy_n(v1.begin(), 15, v2.begin());     // Copy n number of items - 15 here
+copy_backward(v1.begin(), v1.end(), v2.end());      // Copies from back to front
+reverse_copy(v1.begin(), v1.end(), v2.begin());     // Does same as copy_backward
+reverse(v1.begin(), v1.end());      // Uses swap function to reverse
+fill(v1.begin(), v1.end() - 10, 100);   // fill with n - 100 here
+fill_n(v1.begin(), 10, 100);        // Fill n elements with num - 10 and 100 here
+generate(v2.begin(), v2.end(), []()->int{ return rand() % 100; });  
+random_shuffle(v1.begin(), v1.end());  // Shuffles elements in place, can provide lambda(Deprecated since C++ 17, alternative below)
+
+// Alternative for random shuffle, requires random generator
+#include <random>
+
+random_device rd;
+mt19937 g(rd());
+
+shuffle(v1.begin(), v1.end(), g);
+```
+
+* Partitions
+
+Take range of vector to be modified and use bool predicate function to parition
+
+```c++
+partition(v1.begin(), v1.end(), f);     // Moves no. with condition true to front
+stable_partition(v1.begin, v1.end(), f); // Leaves elements in order, takes more time and memory
+partition_copy(v1.begin(), v1.end(), v2.begin(), v3.begin());   // Partition in seperate containers
+```
+
+
+* Sort
+
+```c++
+template <typename T>
+bool mycomp(const T & a, const T & b){
+    return a > b;
+}
+
+sort(v1.begin(), v1.end(), mycomp);
+stable_sort(v1.begin(), v1.end(), mycomp);
+```
