@@ -1,6 +1,6 @@
 # Cpp-Advanced
 
 Reference to advanced topics in C++ including:
-* Google Mock
+* Catch2
 * Templates
 * STL
