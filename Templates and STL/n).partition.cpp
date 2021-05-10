@@ -7,7 +7,7 @@ using namespace std;
 template <typename T>
 bool is_even(const T & v)
 {
-    return ((v / 10) % 2 == 0);
+    return (v % 2 == 0);
 }
 
 template <typename T>
@@ -22,7 +22,7 @@ void dispVect(const vector<T> & v)
 
 int main()
 {
-    vector<int> v1 = { 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
+    vector<int> v1 = { 11, 13, 18, 19, 23, 29, 31, 37, 41, 42, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 98 };
 
     auto r = is_even<int>;
 
